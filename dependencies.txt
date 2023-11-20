@@ -1,0 +1,7 @@
+Node version 18
+MongoAtlas latest version
+npm 9.6.3
+
+Account Enviornment Variables
+-Stripe
+-Cloudinary
