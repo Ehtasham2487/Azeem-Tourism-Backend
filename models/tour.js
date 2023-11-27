@@ -34,7 +34,7 @@ const tourSchema = new Schema({
   },
   videos: {
     type: [],
-    required: true,
+    required: false,
   },
   totalCount: {
     type: Number,
