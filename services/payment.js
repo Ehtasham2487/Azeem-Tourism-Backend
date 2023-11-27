@@ -11,14 +11,14 @@ export const createPayment = async (packageCharges) => {
           product_data: {
             name: "Charges",
           },
-          unit_amount: price,
+          unit_amount: price*100,
         },
         quantity: 1,
       },
     ],
     mode: "payment",
-    success_url: `${API_URL}/payment/confirm`,
-    cancel_url: `${API_URL}/payment/cancel`,
+    success_url: `${API_URL}`,
+    cancel_url: `${API_URL}`,
   });
 
   try {
