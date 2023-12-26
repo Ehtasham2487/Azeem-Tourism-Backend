@@ -11,7 +11,7 @@ export const createPayment = async (packageCharges) => {
           product_data: {
             name: "Charges",
           },
-          unit_amount: price*100,
+          unit_amount: price * 100,
         },
         quantity: 1,
       },
