@@ -8,6 +8,10 @@ const ticketSchema = new Schema({
     type: String,
     required: true,
   },
+  region: {
+    type: String,
+    enum: ["Pakistan", "UAE"]
+  },
   address: {
     type: String,
     required: true,

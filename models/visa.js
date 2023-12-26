@@ -1,58 +1,55 @@
 import { Schema, model } from "mongoose";
 
-const packageSchema = new Schema({
+const visaSchema = new Schema({
   title: {
     type: String,
-    required: true,
+    required: false,
   },
   description: {
     type: String,
-    required: true,
+    required: false,
   },
   region: {
     type: String,
     enum: ["Pakistan", "UAE"]
   },
-  address: {
+  firstName: {
     type: String,
-    required: true,
+    required: false,
   },
-  city: {
+  lastName: {
     type: String,
-    required: true,
+    required: false,
   },
-  state: {
+  email: {
     type: String,
-    required: true,
+    required: false,
   },
-  zip: {
-    type: Number,
-    required: true,
-  },
-  country: {
+  phoneNumber: {
     type: String,
-    required: true,
+    required: false,
+    maxlength: 15,
   },
   images: {
     type: [],
-    required: true,
+    required: false,
   },
   videos: {
     type: [],
     required: false,
   },
-  totalCount: {
-    type: Number,
-    required: true,
-  },
   price: {
     type: Number,
-    required: true,
+    required: false,
+  },
+  duration: {
+    type: Number,
+    required: false,
   },
   active: {
     type: Boolean,
-    required: true,
+    required: false,
   },
 });
 
-export const Package = model("package", packageSchema);
+export const Visa = model("visa", visaSchema);

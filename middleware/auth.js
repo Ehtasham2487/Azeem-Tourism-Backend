@@ -2,11 +2,10 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 // const { ACCESS_JWT_SECRET, REFRESH_JWT_SECRET } = process.env
 let ACCESS_JWT_SECRET, REFRESH_JWT_SECRET;
-if(process.env.NODE_ENV !== 'production'){  
+if (process.env.NODE_ENV !== "production") {
   ACCESS_JWT_SECRET = dotenv.config()?.parsed?.ACCESS_JWT_SECRET;
   REFRESH_JWT_SECRET = dotenv.config()?.parsed?.REFRESH_JWT_SECRET;
-}
-else {
+} else {
   ACCESS_JWT_SECRET = process.env.ACCESS_JWT_SECRET;
   REFRESH_JWT_SECRET = process.env.REFRESH_JWT_SECRET;
 }

@@ -2,7 +2,7 @@ import { Schema, model, mongoose } from "mongoose";
 const orderSchema = new Schema({
   orderType: {
     type: String,
-    enum: ["package", "tour", "ticket"],
+    enum: ["package", "tour", "ticket", "visa", "hotel"],
     required: true,
   },
   objectService: {
@@ -16,11 +16,11 @@ const orderSchema = new Schema({
   },
   tourName: {
     type: String,
-    required: true,
+    required: false,
   },
   tourDate: {
     type: Date,
-    required: true,
+    required: false,
   },
   email: {
     type: String,
@@ -36,13 +36,14 @@ const orderSchema = new Schema({
   },
   pickupTime: {
     type: String,
-    required: true,
+    required: false,
   },
   pickupLocation: {
     type: String,
-    required: true,
+    required: false,
   },
   stripeSessionId: {
+    // NOT USED FOR FRONT_END
     type: String,
     required: true,
   },
