@@ -10,7 +10,7 @@ const ticketSchema = new Schema({
   },
   region: {
     type: String,
-    enum: ["Pakistan", "UAE"]
+    enum: ["Pakistan", "UAE" , "Both"],
   },
   address: {
     type: String,
@@ -51,6 +51,13 @@ const ticketSchema = new Schema({
   active: {
     type: Boolean,
     required: true,
+  },
+  isDiscounted: {
+    type: Boolean,
+    default: false,
+  },
+  Discount: {
+    type: Number,
   },
 });
 

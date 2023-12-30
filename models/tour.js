@@ -10,7 +10,7 @@ const tourSchema = new Schema({
   },
   region: {
     type: String,
-    enum: ["Pakistan", "UAE"]
+    enum: ["Pakistan", "UAE" , "Both"],
   },
   address: {
     type: String,
@@ -53,8 +53,18 @@ const tourSchema = new Schema({
     required: true,
   },
   milestone: {
-    type: [],
-    required: true,
+    type: [{
+      title: String,
+      image: String,
+    }],
+    required: false,
+  },
+  isDiscounted: {
+    type: Boolean,
+    default: false,
+  },
+  Discount: {
+    type: Number,
   },
 });
 

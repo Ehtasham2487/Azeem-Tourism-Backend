@@ -1,0 +1,76 @@
+
+/**
+	Request for Tours POST 	/create
+*/
+{
+  "title": "Sample Tour",
+  "description": "test description",
+  "address": "123 Main St",
+  "city": "Sample City",
+  "state": "Sample State",
+  "zip": 12345,
+  "country": "Sample Country",
+  "images": [
+    "image1.jpg",
+    "image2.jpg"
+  ],
+  "videos": [
+    "intro.mp4",
+    "highlight.mp4"
+  ],
+  "totalCount": 20,
+  "price": 150.00,
+  "active": true,
+  "milestone": [
+    {
+      "title": "First Milestone",
+      "image": "image.jpg"
+    },
+    {
+      "title": "Second Milestone",
+      "image": "image.jpeg"
+    }
+  ],
+  "isDiscounted": true,
+  "Discount": 10
+}
+/**
+	Response for Tours POST 
+*/
+
+{
+  "title": "Sample Tour",
+  "description": "test description",
+  "address": "123 Main St",
+  "city": "Sample City",
+  "state": "Sample State",
+  "zip": 12345,
+  "country": "Sample Country",
+  "images": [
+    "image1.jpg",
+    "image2.jpg"
+  ],
+  "videos": [
+    "intro.mp4",
+    "highlight.mp4"
+  ],
+  "totalCount": 20,
+  "price": 150,
+  "active": true,
+  "milestone": [
+    {
+      "title": "First Milestone",
+      "image": "image.jpg",
+      "_id": "658d5ed822e96a1419369384"
+    },
+    {
+      "title": "Second Milestone",
+      "image": "image.jpeg",
+      "_id": "658d5ed822e96a1419369385"
+    }
+  ],
+  "isDiscounted": true,
+  "Discount": 10,
+  "_id": "658d5ed822e96a1419369383",
+  "__v": 0
+}

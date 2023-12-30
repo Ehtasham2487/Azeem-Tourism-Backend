@@ -19,7 +19,7 @@ const hotelSchema = new Schema({
   },
   region: {
     type: String,
-    enum: ["Pakistan", "UAE"]
+    enum: ["Pakistan", "UAE" , "Both"],
   },
   amenities: [String],
   images: {
@@ -33,6 +33,13 @@ const hotelSchema = new Schema({
   price: {
     type: Number,
     required: true,
+  },
+  isDiscounted: {
+    type: Boolean,
+    default: false,
+  },
+  Discount: {
+    type: Number,
   },
 });
 

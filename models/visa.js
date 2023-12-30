@@ -11,7 +11,7 @@ const visaSchema = new Schema({
   },
   region: {
     type: String,
-    enum: ["Pakistan", "UAE"]
+    enum: ["Pakistan", "UAE" , "Both"],
   },
   firstName: {
     type: String,
@@ -49,6 +49,13 @@ const visaSchema = new Schema({
   active: {
     type: Boolean,
     required: false,
+  },
+  isDiscounted: {
+    type: Boolean,
+    default: false,
+  },
+  Discount: {
+    type: Number,
   },
 });
 
